@@ -11,9 +11,6 @@ function Settings() {
   };
 
   const uploadProfilePicture = (file) => {
-    // You need to implement your logic to upload the file to the server
-    // Once the file is uploaded successfully, you can update the profile picture
-    // For demonstration, I'm just updating the state directly
     setProfilePicture(URL.createObjectURL(file));
   };
 
@@ -70,7 +67,7 @@ function Settings() {
             <div className="profilePicture flex flex-col">
               <h2 className="text-[white] text-[28px]">Profile Picture </h2>
               <p className="mb-[25px] text-[#7182c481]">
-                This settings will change your photo's profile
+                This settings will change your photos profile
               </p>
               <input
                 type="file"
