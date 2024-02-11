@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image";
 function Settings() {
   const [profilePicture, setProfilePicture] = useState(null);
 
@@ -31,7 +32,7 @@ function Settings() {
               placeholder="federicGozzy"
             />
             <p className="text-[#7182c481] mb-[28px]">
-              Must be unique only follow "_" symbol for your username{" "}
+              Must be unique only follow _ symbol for your username
             </p>
           </div>
           <div>
@@ -57,7 +58,7 @@ function Settings() {
           <div className="flex items-start gap-[35px] mt-[35px]">
             <div className="profileChange w-[150px] rounded-[20px] h-[150px] ">
               {profilePicture ? (
-                <img
+                <Image
                   src={profilePicture}
                   alt="Profile"
                   className="w-full h-full object-cover rounded-[20px]"
