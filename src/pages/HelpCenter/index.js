@@ -50,6 +50,7 @@ function HelpCenter() {
                   <Image
                     src={bussiness}
                     width={150}
+                    alt="demo"
                     className="bg-[#1d2e57b5] rounded-[90px] p-[10px] border-[3px] border-dashed  border-[#199cf9]"
                   />
                   <div>
