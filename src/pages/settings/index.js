@@ -78,7 +78,7 @@ function Settings() {
               />
               <label
                 htmlFor="profilePictureInput"
-                className="bg-[#0e98fa] w-[40%] cursor-pointer text-[white] p-[12px] px-[18px] rounded-[50px]"
+                className="bg-[#0e98fa] w-[48%] cursor-pointer text-[white] p-[12px] px-[18px] rounded-[50px]"
               >
                 Upload Now
               </label>
