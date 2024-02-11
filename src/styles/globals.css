@@ -1,33 +1,426 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  outline: none;
+}
+body {
+  overflow-y: hidden;
+}
+::placeholder {
+  padding-left: 20px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: rgb(75, 111, 179) !important;
+  outline: none;
+}
+.nav ul li {
+  background-image: linear-gradient(
+    to bottom,
+    #071041,
+    #071044,
+    #071146,
+    #071149,
+    #07114c
+  );
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #7181c4;
+  border-radius: 50px;
+  border-top: 1px solid #0e1d71;
+  border-bottom: 1px solid #050a29;
+  cursor: pointer;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.leftManu {
+  background: url("https://i.ytimg.com/vi/SGIO4v2K9-Y/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCbwunrVsek5tWkJIZ6VtKnj83aFA");
+  background-size: cover;
+  background-position: 50% 10%;
+}
+.leftOver {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, #04053f1d, #03012bc8);
+  color: white;
+}
+.nav ul li:hover {
+  background-image: linear-gradient(
+    to right,
+    #0575fa,
+    #008bff,
+    #009eff,
+    #00b0ff,
+    #1ec0fa
+  );
+  color: white;
+}
+.nav ul li i {
+  font-size: 18px;
+  color: #7181c4;
+  background-color: #1b266b;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+.nav li:hover i {
+  background-color: rgb(242, 238, 238);
+  color: #1b266b;
+  box-shadow: inset 0px -8px 10px #1b266b76;
+}
+
+.rightLeft {
+  background-image: url("https://www.creativefabrica.com/wp-content/uploads/2023/08/06/Game-Background-Graphics-76306020-1.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #040b38f1;
+}
+.plus {
+  background-image: linear-gradient(
+    to right,
+    #0575fa,
+    #008bff,
+    #009eff,
+    #00b0ff,
+    #1ec0fa
+  );
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  right: -9px;
+  position: relative;
+  border-radius: 50px;
+}
+
+.bg-section {
+  background: url("./../../public/asd.png");
+  background-size: cover;
+  background-position: 50% 50%;
+  box-shadow: 0.5px 0.5px 25px rgba(0, 0, 0, 0.378);
+}
+
+.game1 {
+  width: 100%;
+  height: 200px;
+  background: url("https://i.ytimg.com/vi/uWsQ5IWVilM/maxresdefault.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  border-radius: 35px;
+  box-shadow: 0px 0.5px 25px rgba(0, 0, 0, 0.378);
+  border-top: 2px solid #7f82a1;
+  border-bottom: 2px solid #060a2c;
+  position: relative;
+  opacity: 0.8;
+}
+.game2 {
+  width: 100%;
+  height: 200px;
+  background: url("https://play-lh.googleusercontent.com/aZfy-Zcm1hed3POhcEjkhKhWCIb2ZZtLKrj36XzduTDdbdqQekWK1prnel2J6NQxdg=w526-h296-rw");
+  background-size: cover;
+  border-radius: 35px;
+  box-shadow: 0px 0.5px 25px rgba(0, 0, 0, 0.378);
+  border-top: 2px solid #7f82a1;
+  border-bottom: 2px solid #060a2c;
+  opacity: 0.8;
+  position: relative;
+}
+.game3 {
+  width: 100%;
+  height: 200px;
+  background: url("https://www.dexerto.com/cdn-cgi/image/width=3840,quality=75,format=auto/https://editors.dexerto.com/wp-content/uploads/2023/12/02/fn-underground-main-cover.jpg");
+  background-size: cover;
+  border-radius: 35px;
+  box-shadow: 0px 0.5px 25px rgba(0, 0, 0, 0.378);
+  border-top: 2px solid #7f82a1;
+  border-bottom: 2px solid #060a2c;
+  opacity: 0.8;
+  position: relative;
+}
+
+.overlaygame {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #00000000, #06052683);
+  position: absolute;
+  border-radius: 35px;
+}
+
+.list-bet table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0px 15px;
+  color: white;
+  padding: 10px;
+}
+
+.list-bet td {
+  padding: 10px;
+  border-top: 2px solid #141e5a;
+}
+.list-bet table th {
+  color: #5c6caf;
+  font-weight: normal;
+  text-align: left;
+}
+
+.list-bet td {
+  background-color: #04092f;
+}
+
+.list-bet td:first-child {
+  border-top-left-radius: 50px;
+
+  border-bottom-left-radius: 50px;
+}
+
+.list-bet td:last-child {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.list-bet::-webkit-scrollbar {
+  width: 2px;
+}
+
+.list-bet::-webkit-scrollbar-thumb {
+  background-color: #88888868; /* Color of the scrollbar thumb */
+  border-radius: 4px; /* Border radius of the scrollbar thumb */
+}
+
+.rightMessages {
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.246);
+}
+
+.msgs::-webkit-scrollbar {
+  width: 2px;
+}
+
+.msgs::-webkit-scrollbar-thumb {
+  background-color: #88888868; /* Color of the scrollbar thumb */
+  border-radius: 4px; /* Border radius of the scrollbar thumb */
+}
+
+.covers1 {
+  background: url("https://i.ytimg.com/vi/uWsQ5IWVilM/maxresdefault.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  border-radius: 35px;
+  box-shadow: 0px 0.5px 25px rgba(0, 0, 0, 0.378);
+  border-top: 2px solid #7f82a1;
+  border-bottom: 2px solid #060a2c;
+  opacity: 0.8;
+  scroll-snap-align: center;
+  width: 31.5%;
+  height: 210px;
+  cursor: pointer;
+  overflow-y: hidden;
+  transition: 0.5s ease;
+}
+
+.covers2 {
+  background: url("https://play-lh.googleusercontent.com/aZfy-Zcm1hed3POhcEjkhKhWCIb2ZZtLKrj36XzduTDdbdqQekWK1prnel2J6NQxdg=w526-h296-rw");
+  background-size: cover;
+  background-position: 50% 50%;
+  border-radius: 35px;
+  box-shadow: 0px 0.5px 25px rgba(0, 0, 0, 0.378);
+  border-top: 2px solid #7f82a1;
+  border-bottom: 2px solid #060a2c;
+  opacity: 0.8;
+  scroll-snap-align: center;
+  width: 31.5%;
+  height: 210px;
+  cursor: pointer;
+  overflow-y: hidden;
+  transition: 0.5s ease;
+}
+
+.covers3 {
+  background: url("https://www.dexerto.com/cdn-cgi/image/width=3840,quality=75,format=auto/https://editors.dexerto.com/wp-content/uploads/2023/12/02/fn-underground-main-cover.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  border-radius: 35px;
+  box-shadow: 0px 0.5px 25px rgba(0, 0, 0, 0.378);
+  border-top: 2px solid #7f82a1;
+  border-bottom: 2px solid #060a2c;
+  opacity: 0.8;
+  scroll-snap-align: center;
+  width: 31.5%;
+  height: 210px;
+  cursor: pointer;
+  overflow-y: hidden;
+  transition: 0.5s ease;
+}
+
+.leftContent1::-webkit-scrollbar {
+  width: 2px;
+}
+
+.leftContent1::-webkit-scrollbar-thumb {
+  background-color: #88888868; /* Color of the scrollbar thumb */
+  border-radius: 4px; /* Border radius of the scrollbar thumb */
+}
+
+.demo::-webkit-scrollbar {
+  height: 1px;
+}
+
+.demo::-webkit-scrollbar-thumb {
+  background-color: #88888868; /* Color of the scrollbar thumb */
+  border-radius: 4px; /* Border radius of the scrollbar thumb */
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #88888868; /* Color of the scrollbar thumb */
+  border-radius: 4px; /* Border radius of the scrollbar thumb */
+}
+
+.btn {
+  background-image: linear-gradient(
+    to right,
+    #0575fa,
+    #008bff,
+    #009eff,
+    #00b0ff,
+    #1ec0fa
+  );
+}
+
+.boxShad {
+  box-shadow: 0.5px 8px 25px rgba(0, 0, 0, 0.367);
+  border-top: 1px solid #14205e;
+}
+
+.users1 {
+  background: url("https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2021%2F10%2Frtfkt-murakami-nft-artworks-03.jpg?cbr=1&q=90");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.users2 {
+  background: url("https://imageio.forbes.com/specials-images/imageserve/613df8e8d679a21b766a1636/bigbun-2/960x0.jpg?height=711&width=711&fit=bounds");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.users3 {
+  background: url("https://riseangle.com/storage/events/9RMQ59915PnioEPHpSVPlGGUKf9ql4fUKHwbY074.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.profile {
+  background: url("https://riseangle.com/storage/events/9RMQ59915PnioEPHpSVPlGGUKf9ql4fUKHwbY074.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.users {
+  background: url("https://imageio.forbes.com/specials-images/imageserve/613df8e8d679a21b766a1636/bigbun-2/960x0.jpg?height=711&width=711&fit=bounds");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.listProfile {
+  background: url("https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2021%2F10%2Frtfkt-murakami-nft-artworks-03.jpg?cbr=1&q=90");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.listProfile1 {
+  background: url("https://imageio.forbes.com/specials-images/imageserve/613df8e8d679a21b766a1636/bigbun-2/960x0.jpg?height=711&width=711&fit=bounds");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.profileChange {
+  background: url("https://riseangle.com/storage/events/9RMQ59915PnioEPHpSVPlGGUKf9ql4fUKHwbY074.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+@media only screen and (max-width: 1154px) {
+  .leftContent {
+    flex: none;
+    width: 100%;
+  }
+  .leftContent {
+    flex: none;
+    width: 100%;
+  }
+  .rightChat {
+    display: none;
+  }
+  .flexbox {
+    flex-wrap: wrap;
+  }
+  .chartjs {
+    display: initial;
+  }
+  .chart {
+    flex: none;
+    width: 100%;
+    margin-top: 25px;
+  }
+  .chartinfo {
+    flex: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .nav ul li a,
+  .name,
+  .information,
+  .inf {
+    display: none;
+  }
+  .nav ul li {
+    background: transparent;
+    border: none;
+  }
+  .leftHeadr1 {
+    display: flex;
+    flex: 1;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+@media only screen and (max-width: 918px) {
+  .leftManu {
+    display: none;
+  }
+  .texthero {
+    font-size: 20px !important;
+  }
+  .demo {
+    gap: 13px;
+  }
+  .covers1,
+  .covers2,
+  .covers3 {
+    width: 59%;
+  }
+  .helpcenter {
+    width: 90%;
+  }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  #iconbussiness {
+    flex-wrap: wrap;
+  }
+  .flexinput {
+    width: 100%;
+    flex-direction: column;
   }
 }
